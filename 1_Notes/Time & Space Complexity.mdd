@@ -1,0 +1,42 @@
+O()  -> worst case
+Ω()  -> best case
+θ()  -> avg case
+
+=> Space Complexity:-
+auxilary space - jo code karte samay use karte hai
+total space - input + auxilary space 
+
+=> Time Complexity:-
+
+for(i=0;i<n;i++)
+{
+    for(j=0;j<n;j++){
+        cout<<"hi";
+    }
+}            O(n2)
+
+
+for(i=0;i<n;i++)
+{
+    for(j=0;j<i2;j++){
+        cout<<"hi";
+    }
+}   
+i=1   j=1    1 time
+i=2   j=4    4 time
+i=3   j=9    9 time
+i=n   j=n2   n2 time
+1+4+9+n2 = n(n+1)(2n+1)/6        O(n3)
+
+
+for(i=0;i<n;i*2){
+    cout<<"hi";
+}
+i=1(2^0)     1 time
+i=2(2^1)     1 time
+i=4(2^2)     1 time
+i=8(2^3)     1 time
+i=n(2^k)     1 time
+n=2^k  taking log
+logn=klog2
+k=logn/log2    k=log₂n      total k+1 times O(log₂n)
