@@ -107,7 +107,7 @@ int main()
         cout << endl;
     }
 
-    // // undirectes weighted graph
+    // // undirected weighted graph
     // int vertex, edges;
     // cout << "enter vertex and edges: ";
     // cin >> vertex >> edges;
