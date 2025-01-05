@@ -4,7 +4,7 @@ using namespace std;
 
 // shortest path from src(given 0) to all other nodes in DAWG(directed acyclic weighted graph) having N vertices
 // edges given in array along with weight
-void DFS(int node, vector<pair<int, int>> adjlist[], stack<int> &s, vector<int> &visited)
+void DFS(int node, vector<pair<int, int>> adjlist[], stack<int> &s, vector<bool> &visited)
 {
     visited[node] = 1;
     for (int i = 0; i < adjlist[node].size(); i++)
@@ -29,7 +29,7 @@ vector<int> shortestDist(int N, vector<vector<int>> edges)
 
     // topological sort through DFS
     stack<int> s;
-    vector<int> visited(N, 0);
+    vector<bool> visited(N, 0);
     int src = 0;
     DFS(src, adjlist, s, visited);
 

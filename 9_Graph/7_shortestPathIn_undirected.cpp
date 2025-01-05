@@ -8,7 +8,7 @@ using namespace std;
 // space complexity - O(v)
 vector<int> shortestDist(vector<int> adjlist[], int src, int vertex)
 {
-    vector<int> visited(vertex, 0);
+    vector<bool> visited(vertex, 0);
     vector<int> dist(vertex, -1);
     queue<int> q;
     q.push(src);
@@ -36,7 +36,7 @@ vector<int> shortestDist(vector<int> adjlist[], int src, int vertex)
 // find the shortest path b/w two nodes through BFS
 vector<int> shortestPath(vector<int> adjlist[], int vertex, int src, int target)
 {
-    vector<int> visited(vertex, 0);
+    vector<bool> visited(vertex, 0);
     vector<int> parent(vertex, -1);
     queue<int> q;
     q.push(src);
